@@ -9,7 +9,7 @@ $$
 C(t)=10\,FN(t)+FP(t).
 $$
 
-**Джерело набору:** [Credit Card Fraud Detection, Kaggle / ULB](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud). Не включайте `creditcard.csv` у GitHub. Оригінальний файл містить 284 807 транзакцій, 492 шахрайства.
+**Джерело набору:** [Credit Card Fraud Detection, Kaggle / ULB](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 
 ## Структура
 
@@ -26,7 +26,7 @@ $$
 **Команда 1 — навчання один раз:**
 
 ```bash
-uv run --python 3.12 --with-requirements requirements.txt python train.py --csv "C:/data/creditcard.csv" --output results
+uv run --python 3.12 --with-requirements requirements.txt python train.py --csv "C:/data/creditcard.csv" --output results_retrain
 ```
 
 **Команда 2 — аналіз зі збережених прогнозів, без навчання і без CSV:**
@@ -162,6 +162,9 @@ true=1           19       80
 
 Якщо TP+FP=0, precision не визначена, бо модель нічого не позначила як шахрайство; якщо TP+FN=0, recall не визначена, бо у вибірці не було жодного реального шахрайства.
 <!-- RESULTS:END -->
+## Підсумкові висновки
+
+На тестовій вибірці зменшення порога з 0,5 до 0,03703 дозволило скоротити кількість пропущених шахрайських транзакцій з 28 до 19. Водночас кількість хибних спрацювань збільшилася з 8 до 35. За заданого співвідношення вартостей 10:1 сумарна вартість помилок зменшилася з 288 до 225, тобто на 21,9%. Таким чином, оптимізація порога виявилася ефективною для заданої функції вартості, хоча й супроводжувалася зниженням precision.
 
 ## Використані джерела та інструменти
 - **ChatGPT** — допоміжний генеративний інструмент для підготовки коду
