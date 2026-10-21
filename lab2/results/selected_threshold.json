@@ -1,0 +1,5 @@
+{
+  "threshold": 0.03703416511416435,
+  "min_validation_cost": 188,
+  "tie_break": "largest_threshold"
+}

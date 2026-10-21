@@ -1,0 +1,65 @@
+{
+  "dataset": "Credit Card Fraud Detection (ULB)",
+  "num_rows": 284807,
+  "num_fraud": 492,
+  "features": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "Amount"
+  ],
+  "excluded": [
+    "Time",
+    "Class"
+  ],
+  "epochs": 12,
+  "batch_size": 1024,
+  "learning_rate": 0.001,
+  "seed_torch": 0,
+  "seed_numpy_rng": 0,
+  "device": "cpu",
+  "dtype": "float32",
+  "splits": {
+    "train": {
+      "n": 170884,
+      "fraud": 295,
+      "fraud_rate": 0.0017263172678542169
+    },
+    "validation": {
+      "n": 56961,
+      "fraud": 98,
+      "fraud_rate": 0.0017204754130018785
+    },
+    "test": {
+      "n": 56962,
+      "fraud": 99,
+      "fraud_rate": 0.0017380007724447878
+    }
+  },
+  "final_train_bce": 0.0033697232145069042
+}

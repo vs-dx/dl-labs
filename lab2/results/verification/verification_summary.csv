@@ -1,0 +1,4 @@
+case,candidates,threshold,TP,FP,FN,TN,C,exact_match
+A,6,0.40000000000000002,2,2,0,2,2,True
+B,4,inf,0,0,0,3,0,True
+C,4,0.80000000000000004,1,0,1,11,10,True
